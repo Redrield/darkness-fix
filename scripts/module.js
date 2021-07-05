@@ -7,5 +7,7 @@ Hooks.once('ready', async function() {
 });
 
 Hooks.on('sightRefresh', layer => {
-    console.log("DI: SOURCES " + layer.sources);
+    for(let [name, source] of layer.sources) {
+        console.log("SOURCE: " + name + " " + source);
+    }
 })
